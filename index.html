@@ -2,86 +2,144 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Подборка товаров — Яндекс Маркет</title>
   <style>
-    body { font-family: Arial, sans-serif; background: #f7f7f7; color: #333; margin:0; padding:20px; }
-    .container { max-width: 1000px; margin: auto; }
+    body { font-family: Arial, sans-serif; background: #f7f7f7; color: #333; margin:0; padding:0; }
+    header { background: #ff6600; color: #fff; padding: 20px; text-align: center; }
+    header h1 { margin:0; }
+    nav { background: #333; color: #fff; padding: 10px; text-align: center; }
+    nav a { color:#fff; margin:0 15px; text-decoration:none; font-weight:bold; }
+    nav a:hover { text-decoration: underline; }
+    .container { max-width: 1000px; margin:auto; padding:20px; }
+    section { margin-bottom: 50px; }
+    section h2 { color:#ff6600; margin-bottom: 10px; }
+    section p { margin-bottom: 20px; }
     .cards { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; }
-    .card { background: #fff; border: 1px solid #ddd; border-radius: 8px; width: 300px; overflow: hidden; display: flex; flex-direction: column; box-shadow: 0 2px 6px rgba(0,0,0,0.05); }
-    .card img { width: 100%; height: auto; object-fit: cover; }
-    .card-body { padding: 15px; flex: 1; display: flex; flex-direction: column; }
-    .card-body h3 { margin:0 0 10px 0; font-size: 20px; }
-    .card-body p { flex: 1; font-size: 14px; color: #555; }
-    .card-body a { margin-top:15px; text-decoration: none; background: #ff6600; color: #fff; padding: 12px; text-align: center; border-radius: 6px; font-weight: bold; }
-    .card-body a:hover { background: #e55a00; }
+    .card { background: #fff; border: 1px solid #ddd; border-radius: 8px; width: 300px; display: flex; flex-direction: column; box-shadow:0 2px 6px rgba(0,0,0,0.05); overflow:hidden; }
+    .card img { width: 100%; height:auto; object-fit: cover; }
+    .card-body { padding: 15px; flex:1; display:flex; flex-direction: column; }
+    .card-body h3 { margin:0 0 10px 0; font-size:20px; }
+    .card-body p { flex:1; font-size:14px; color:#555; }
+    .card-body a { margin-top:15px; text-decoration:none; background:#ff6600; color:#fff; padding:12px; text-align:center; border-radius:6px; font-weight:bold; }
+    .card-body a:hover { background:#e55a00; }
+    footer { text-align:center; margin:40px 0; font-size:14px; color:#777; padding:10px 0; background:#eee; }
   </style>
 </head>
 <body>
+  <header>
+    <h1>Подборка популярных товаров</h1>
+    <p>Лучшие товары на Яндекс Маркете с партнёрской ссылкой</p>
+  </header>
+
+  <nav>
+    <a href="#electronics">Электроника</a>
+    <a href="#home">Дом</a>
+    <a href="#sport">Спорт</a>
+  </nav>
+
   <div class="container">
-    <h1>Рекомендуемые товары</h1>
-    <div class="cards">
 
-      <!-- Товар 1 — наушники -->
-      <div class="card">
-        <img src="https://via.placeholder.com/300x300.png?text=Наушники" alt="Беспроводные наушники">
-        <div class="card-body">
-          <h3>Беспроводные наушники</h3>
-          <p>Удобные наушники с шумоподавлением — отлично подходят для музыки, работы и поездок.</p>
-          <a href="https://partner.market.yandex.ru/?promo=YOUR_PROMO_CODE" target="_blank">Купить на Яндекс Маркете</a>
+    <!-- Электроника -->
+    <section id="electronics">
+      <h2>Электроника</h2>
+      <p>Обзор популярных гаджетов 2025 года: наушники, смарт-часы и портативные колонки для дома и активного образа жизни.</p>
+      <div class="cards">
+        <div class="card">
+          <img src="images/naushniki.jpg" alt="Беспроводные наушники">
+          <div class="card-body">
+            <h3>Беспроводные наушники</h3>
+            <p>Наушники с шумоподавлением и до 20 часов работы. Отлично подходят для музыки и звонков.</p>
+            <a href="https://partner.market.yandex.ru/?promo=YOUR_PROMO_CODE" target="_blank">Купить на Яндекс Маркете</a>
+          </div>
+        </div>
+        <div class="card">
+          <img src="images/smartwatch.jpg" alt="Смарт-часы">
+          <div class="card-body">
+            <h3>Смарт-часы</h3>
+            <p>Следите за здоровьем, шагами и уведомлениями. Идеально для спорта и активного образа жизни.</p>
+            <a href="https://partner.market.yandex.ru/?promo=YOUR_PROMO_CODE" target="_blank">Купить на Яндекс Маркете</a>
+          </div>
+        </div>
+        <div class="card">
+          <img src="images/kolonka.jpg" alt="Портативная колонка">
+          <div class="card-body">
+            <h3>Портативная колонка</h3>
+            <p>Компактная колонка с мощным звуком. Подходит для дома, улицы и поездок.</p>
+            <a href="https://partner.market.yandex.ru/?promo=YOUR_PROMO_CODE" target="_blank">Купить на Яндекс Маркете</a>
+          </div>
         </div>
       </div>
+    </section>
 
-      <!-- Товар 2 — смарт-часы / фитнес-браслет -->
-      <div class="card">
-        <img src="https://via.placeholder.com/300x300.png?text=Смарт-часы" alt="Смарт-часы">
-        <div class="card-body">
-          <h3>Смарт‑часы / фитнес‑браслет</h3>
-          <p>Следите за здоровьем, шагами, уведомлениями — удобно для активного образа жизни.</p>
-          <a href="https://partner.market.yandex.ru/?promo=YOUR_PROMO_CODE" target="_blank">Купить на Яндекс Маркете</a>
+    <!-- Дом -->
+    <section id="home">
+      <h2>Дом</h2>
+      <p>Полезные товары для дома: робот-пылесос, складной столик и аксессуары для удобства и комфорта.</p>
+      <div class="cards">
+        <div class="card">
+          <img src="images/robot.jpg" alt="Робот-пылесос">
+          <div class="card-body">
+            <h3>Робот-пылесос</h3>
+            <p>Умное устройство для автоматической уборки. Экономия времени и сил.</p>
+            <a href="https://partner.market.yandex.ru/?promo=YOUR_PROMO_CODE" target="_blank">Купить на Яндекс Маркете</a>
+          </div>
+        </div>
+        <div class="card">
+          <img src="images/stolik.jpg" alt="Складной столик">
+          <div class="card-body">
+            <h3>Складной столик</h3>
+            <p>Компактный и удобный столик для дома, отдыха и работы.</p>
+            <a href="https://partner.market.yandex.ru/?promo=YOUR_PROMO_CODE" target="_blank">Купить на Яндекс Маркете</a>
+          </div>
+        </div>
+        <div class="card">
+          <img src="images/accessory.jpg" alt="Аксессуар для дома">
+          <div class="card-body">
+            <h3>Аксессуар для дома</h3>
+            <p>Полезный предмет для организации пространства и уюта в квартире.</p>
+            <a href="https://partner.market.yandex.ru/?promo=YOUR_PROMO_CODE" target="_blank">Купить на Яндекс Маркете</a>
+          </div>
         </div>
       </div>
+    </section>
 
-      <!-- Товар 3 — портативная колонка -->
-      <div class="card">
-        <img src="https://via.placeholder.com/300x300.png?text=Колонка" alt="Портативная колонка">
-        <div class="card-body">
-          <h3>Портативная колонка</h3>
-          <p>Компактная колонка для музыки дома, на природе или в поездках — мощный звук и автономность.</p>
-          <a href="https://partner.market.yandex.ru/?promo=YOUR_PROMO_CODE" target="_blank">Купить на Яндекс Маркете</a>
+    <!-- Спорт -->
+    <section id="sport">
+      <h2>Спорт</h2>
+      <p>Товары для активного образа жизни: фитнес-браслеты, коврики для йоги и спортивные аксессуары.</p>
+      <div class="cards">
+        <div class="card">
+          <img src="images/fitness.jpg" alt="Фитнес-браслет">
+          <div class="card-body">
+            <h3>Фитнес-браслет</h3>
+            <p>Отслеживает шаги, пульс и сон. Отлично подходит для спорта и здоровья.</p>
+            <a href="https://partner.market.yandex.ru/?promo=YOUR_PROMO_CODE" target="_blank">Купить на Яндекс Маркете</a>
+          </div>
+        </div>
+        <div class="card">
+          <img src="images/yoga.jpg" alt="Коврик для йоги">
+          <div class="card-body">
+            <h3>Коврик для йоги</h3>
+            <p>Комфортный и нескользящий коврик для йоги, пилатеса и растяжки.</p>
+            <a href="https://partner.market.yandex.ru/?promo=YOUR_PROMO_CODE" target="_blank">Купить на Яндекс Маркете</a>
+          </div>
+        </div>
+        <div class="card">
+          <img src="images/sports_accessory.jpg" alt="Спортивный аксессуар">
+          <div class="card-body">
+            <h3>Спортивный аксессуар</h3>
+            <p>Полезный аксессуар для домашних тренировок и активного отдыха.</p>
+            <a href="https://partner.market.yandex.ru/?promo=YOUR_PROMO_CODE" target="_blank">Купить на Яндекс Маркете</a>
+          </div>
         </div>
       </div>
+    </section>
 
-      <!-- Товар 4 — робот‑пылесос / уборка (товар для дома) -->
-      <div class="card">
-        <img src="https://via.placeholder.com/300x300.png?text=Робот‑пылесос" alt="Робот-пылесос">
-        <div class="card-body">
-          <h3>Робот‑пылесос</h3>
-          <p>Умное решение для уборки — экономия времени и сил дома или в квартире.</p>
-          <a href="https://partner.market.yandex.ru/?promo=YOUR_PROMO_CODE" target="_blank">Купить на Яндекс Маркете</a>
-        </div>
-      </div>
-
-      <!-- Товар 5 — складной столик / аксессуар для дома -->
-      <div class="card">
-        <img src="https://via.placeholder.com/300x300.png?text=Аксессуар+для+дома" alt="Аксессуар для дома">
-        <div class="card-body">
-          <h3>Аксессуар для дома</h3>
-          <p>Удобный и компактный — для уюта, порядка или организации пространства в доме.</p>
-          <a href="https://partner.market.yandex.ru/?promo=YOUR_PROMO_CODE" target="_blank">Купить на Яндекс Маркете</a>
-        </div>
-      </div>
-
-      <!-- Товар 6 — спортивный инвентарь / аксессуар -->
-      <div class="card">
-        <img src="https://via.placeholder.com/300x300.png?text=Спорт+и+фитнес" alt="Спортивный инвентарь">
-        <div class="card-body">
-          <h3>Спортивный инвентарь / аксессуар</h3>
-          <p>Полезный товар для дома или улицы — подойдут для тренировок, спорта и активного отдыха.</p>
-          <a href="https://partner.market.yandex.ru/?promo=YOUR_PROMO_CODE" target="_blank">Купить на Яндекс Маркете</a>
-        </div>
-      </div>
-
-    </div>
   </div>
+
+  <footer>
+    © 2025 — Партнёрская площадка
+  </footer>
 </body>
 </html>
